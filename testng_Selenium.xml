@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Parallel Test Suite" parallel="tests" thread-count="2">
+    <test verbose="2" preserve-order="true" name="FireFox Test">
+        <parameter name="browser" value="firefox"></parameter>
+    <classes>
+        <class name="com.san.testclasses.TestNG_SeleniumParametersParallelExample"></class>
+    </classes>
+    </test>
+
+    <test verbose="2" preserve-order="true" name="Chrome Test">
+        <parameter name="browser" value="chrome"></parameter>
+        <classes>
+            <class name="com.san.testclasses.TestNG_SeleniumParametersParallelExample"></class>
+        </classes>
+    </test>
+</suite>
